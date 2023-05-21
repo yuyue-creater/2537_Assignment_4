@@ -1,0 +1,61 @@
+body {
+    margin: 0px;
+    font-family: "Pokémon DP Pro";
+}
+
+#game_grid {
+    box-sizing: content-box;
+    border: 2px blue solid;
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transition: transform 1s;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+img {
+    width: 100%
+}
+
+.front_face,
+.back_face {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
+
+.front_face {
+    transform: rotateY(180deg);
+}
+
+#header {
+    text-align: center;
+}
+
+.active {
+    background-color: blue;
+    color: white;
+}
+
+.medium {
+    width: 800px !important;
+    height: 600px !important;
+}
+
+.hard {
+    width: 1200px !important;
+    height: 800px !important;
+}
